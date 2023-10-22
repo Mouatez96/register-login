@@ -4,6 +4,7 @@ import {AuthService} from "../../services/auth.service";
 import {Router} from "@angular/router";
 import {MessageService} from "primeng/api";
 import {User} from "../../interfaces/auth";
+import {passwordMatchValidator} from "../../shared/password-match.directive";
 
 @Component({
   selector: 'app-register',
@@ -44,9 +45,8 @@ export class RegisterComponent implements OnInit{
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
     }, {
-
-      }
-    )
+      validators: passwordMatchValidator
+    })
   }
 
   onSubmit() {

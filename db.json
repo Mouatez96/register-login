@@ -5,6 +5,12 @@
       "fullName": "a",
       "password": "a",
       "id": 1
+    },
+    {
+      "email": "b@b.com",
+      "fullName": "b",
+      "password": "bb",
+      "id": 2
     }
   ]
 }
