@@ -14,4 +14,8 @@ export class AuthService {
   getUserByEmail(email: string): Observable<User[]> {
     return this._http.get<User[]>(`${this.apiUrl}/users?email=${email}`);
   }
+
+  addUser(user: User): Observable<User> {
+    return this._http.post<User>(`${this.apiUrl}/users`, user);
+  }
 }

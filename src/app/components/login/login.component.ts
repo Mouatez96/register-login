@@ -51,7 +51,6 @@ export class LoginComponent implements OnInit{
         }else {
           this._messageService.add({ severity: 'error', summary: 'Error', detail: 'Email or password is wrong' });
         }
-
       },
       error: (error) => {
         this._messageService.add({ severity: 'error', summary: 'Error', detail: 'something went wrong' });
